@@ -1,0 +1,13 @@
+{% extends 'Login_app/base.html' %}
+ 
+{% block myblock %}
+ 
+ 
+<form action="{% url 'Login_app:user_login' %}" method="POST">
+<input type="text" name="name" placeholder="name">
+<input type="password" name="password" placeholder="password">
+{% csrf_token %}
+<input type="submit" value="Login" name="submit">
+</form>
+ 
+{% endblock  %}

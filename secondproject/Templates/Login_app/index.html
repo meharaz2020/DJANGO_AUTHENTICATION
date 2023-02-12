@@ -1,0 +1,12 @@
+{% extends 'Login_app/base.html' %}
+{% block myblock %}
+
+{% if user.is_authenticated %}
+<h1>Name {{user_basic_info.username}}</h1>
+<h1>Name {{user_basic_info.email}}</h1>
+<h1>Name {{user_more_info.facebook_id}}</h1>
+<img src="/media/{{user_more_info.profile_pic}}" alt="">
+{% else %}
+<h2>I am index page</h2>
+{% endif %}
+{% endblock  %}
